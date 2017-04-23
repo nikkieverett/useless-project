@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>You Are Super Useless</title>
+    <link rel="stylesheet" href="cssreset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+  </head>
+  <body id="body">
+    <form sction="script.js" onsubmit="return checkForm()">
+      <ul id="list">
+        <li class="visible" id="1">
+          <h1>What is your gender?</h1>
+          <input type="text" id="gender" placeholder="Type your answer here">
+        </li>
+        <li id="2">
+          <h1>What is your name?</h1>
+          <input type="text" id="your-name" placeholder="Type your answer here">
+        </li>
+        <li id="3">
+          <h1>What did you want to be when you grew up?</h1>
+          <input type="text" id="occupation" placeholder="Type your answer here">
+        </li>
+        <li id="4">
+          <h1>Who is your favorite actor?</h1>
+          <input type="text" id="villain" placeholder="Type your answer here">
+        </li>
+        <li id="7">
+          <h1>Pick a color</h1>
+          <input type="text" id="color" placeholder="Type your answer here">
+        </li>
+        <li id="8">
+          <h1>What's your favorite type of animal?</h1>
+          <input type="text" id="animal" placeholder="Type your answer here">
+        </li>
+        <li id="9">
+          <h1>What's your favorite city?</h1>
+          <input type="text" id="city" placeholder="Type your answer here">
+        </li>
+        <li id="10">
+          <h1>Enter the name of someone of the opposite sex</h1>
+          <input type="text" id="persons-name" placeholder="Type your answer here">
+        </li>
+        <li id="11">
+          <h1>Enter a body part (singular)</h1>
+          <input type="text" id="body-part" placeholder="Type your answer here">
+        </li>
+        <li id="12">
+          <h1>Enter a verb</h1>
+          <input type="text" id="verb-1" placeholder="Type your answer here">
+        </li>
+        <li id="13">
+          <h1>Enter a noun</h1>
+          <input type="text" id="noun-1" placeholder="Type your answer here">
+        </li>
+        <li id="14">
+          <h1>What's your favorite restaurant?</h1>
+          <input type="text" id="restaurant" placeholder="Type your answer here">
+        </li>
+        <li id="15">
+          <h1>If you could visit any historic monument what would it be?</h1>
+          <input type="text" id="historic-monument" placeholder="Type your answer here">
+        </li>
+        <li id="16">
+          <h1>Enter a past tense action verb</h1>
+          <input type="text" id="verb-2" placeholder="Type your answer here">
+        </li>
+        <li id="17">
+          <h1>Whats your favorite food</h1>
+          <input type="text" id="food" placeholder="Type your answer here">
+        </li>
+      </ul>
+    </form>
+    <div class="container">
+      <button id="submit">I'm ready</button>
+      <div id="story"></div>
+    </div>
+
+    <script type="text/html" id="male-story-template">
+      <p>
+        Meet our hero, <span>{{yourName}}</span>, a super intelligent <span>{{occupation}}</span>. A long time ago, in a galaxy far, far, away a run in with <span>{{villain}}</span>, (his arch-nemesis) lead to the creation of his superhero alter ego, <span>{{hero1}} {{hero2}}</span>; a <span>{{color}}</span> giant capable of mass-destruction.
+      </p>
+
+      <p>
+        One day, a <span>{{animal}}</span> explodes, causing the entire city of <span>{{city}}</span> to burst into flames. <span>{{hero1}} {{hero2}}</span>'s super tingly super senses alert him to the danger and soon he realizes that <span>{{villain}}</span> is once again stirring up trouble.
+      </p>
+
+      <p>
+        While on his way to the scene of the explosion, he teams up with an extremely attractive woman named <span>{{personName}}</span>, who has an incredibly shaped <span>{{bodyPart}}</span>. She may be from the streets, but she can <span>{{verb1}}</span> like nobody's business.
+      </p>
+
+      <p>
+        Anyways, the duo decide to turn the tables on <span>{{villain}}</span> by blowing up a <span>{{noun1}}</span>, which triggers a chain reaction, causing the local <span>{{restaurant}}</span>, and the famous <span>{{monument}}</span> to explode and rain down even more flames and cutlery and body parts on the already terrified citizens of <span>{{city}}</span>.
+      </p>
+
+      <p>
+        In the midst of all this chaos, the bad guys helicopter gets <span>{{verb2}}</span> by a piece of <span>{{food}}</span> from when the <span>{{restaurant}}</span> exploded. This causes yet another explosion which unfortunately shoots a fireball straight into the heart of <span>{{personName}}</span> but on the bright side.. it also destroys <span>{{villain}}</span>.
+      </p>
+      <div class="the-end">
+        THE END.
+      </div>
+      <div class="the-end">
+        -Directed by Michael Bay
+      </div>
+    </script>
+
+    <script type="text/html" id="female-story-template">
+      <p>
+        Meet our hero, <span>{{yourName}}</span>, a super intelligent <span>{{occupation}}</span>. A long time ago, in a galaxy far, far, away a run in with <span>{{villain}}</span>, (her arch-nemesis) lead to the creation of her superhero alter ego, <span>{{hero1}} {{hero2}}</span>; a <span>{{color}}</span> giant capable of mass-destruction.
+      </p>
+
+      <p>
+        One day, a <span>{{animal}}</span> explodes, causing the entire city of <span>{{city}}</span> to burst into flames. <span>{{hero1}} {{hero2}}</span>'s super tingly super senses alert her to the danger and soon she realizes that <span>{{villain}}</span> is once again stirring up trouble.
+      </p>
+
+      <p>
+        While on her way to the scene of the explosion, she teams up with an extremely attractive man named <span>{{personName}}</span>, who has an incredibly shaped <span>{{bodyPart}}</span>. He may be from the streets, but he can <span>{{verb1}}</span> like nobody's business.
+      </p>
+
+      <p>
+        Anyways, the duo decide to turn the tables on <span>{{villain}}</span> by blowing up a <span>{{noun1}}</span>, which triggers a chain reaction, causing the local <span>{{restaurant}}</span>, and the famous <span>{{monument}}</span> to explode and rain down even more flames and cutlery and body parts on the already terrified citizens of <span>{{city}}</span>.
+      </p>
+
+      <p>
+        In the midst of all this chaos, the bad guys helicopter gets <span>{{verb2}}</span> by a <span>{{food}}</span> from when the <span>{{restaurant}}</span> exploded. This causes yet another explosion which unfortunately shoots a fireball straight into the heart of <span>{{personName}}</span> but on the bright side.. it also destroys <span>{{villain}}</span>.
+      </p>
+      <div class="the-end">
+        THE END.
+      </div>
+      <div class="the-end">
+        -Directed by Michael Bay
+      </div>
+      </div>
+    </script>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

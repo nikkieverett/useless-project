@@ -1,0 +1,79 @@
+form{
+width: 960px;
+margin: 100px auto;
+font-family: 'Source Sans Pro', sans-serif;
+font-weight: 300;
+}
+li {
+  margin: 100px;
+  opacity: .2;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+input, input::placeholder{
+  display: block;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: rgb(204, 133, 43);
+  border: none;
+  border-bottom: 1px solid rgb(204, 133, 43);
+}
+h1{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+
+}
+.visible{
+  opacity: .7;
+}
+.container {
+  width: 800px;
+  margin: 0 auto 100px auto;
+  background-color: rgba(255,255,255,.4);
+}
+button {
+  background-color: rgba(204, 133, 43, .7);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid rgb(204, 133, 43);
+  margin: 0 auto 100px auto;
+  width:150px;
+  height: 60px;
+  display: block;
+}
+#story {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6em;
+  padding: 20px;
+}
+#story span {
+  color: rgba(204, 133, 43, 1);
+  font-size: 24px;
+  padding: 5px;
+}
+.the-end{
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+
+}
+.background {
+  background-image: url(dancing.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
