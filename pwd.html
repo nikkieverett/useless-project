@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///Users/nikki_everett/Dev/useless-project/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Magic 8 Ball</title>
+    <script src="./pwd_files/processing.js"></script>
+
+    <style>
+    .container {
+      width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    select{
+      margin-bottom: 20px;
+
+    }
+    button{
+      margin:20px;
+      width: 100px;
+      height: 30px;
+      border:none;
+    }
+
+    </style>
+
+  <style type="text/css">@font-face {
+  font-family: "PjsEmptyFont";
+  src: url('data:application/x-font-ttf;base64,AAEAAAAKAIAAAwAgT1MvMgAAAAAAAAEoAAAAVmNtYXAAAAAAAAABiAAAACxnbHlmAAAAAAAAAbwAAAAkaGVhZAAAAAAAAACsAAAAOGhoZWEAAAAAAAAA5AAAACRobXR4AAAAAAAAAYAAAAAGbG9jYQAAAAAAAAG0AAAABm1heHAAAAAAAAABCAAAACBuYW1lAAAAAAAAAeAAAAAgcG9zdAAAAAAAAAIAAAAAEAABAAAAAQAAAkgTY18PPPUACwAgAAAAALSRooAAAAAAyld0xgAAAAAAAQABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAACAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMAIwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMAAQAAAAwABAAgAAAABAAEAAEAAABB//8AAABB////wAABAAAAAAAAAAgAEgAAAAEAAAAAAAAAAAAAAAAxAAABAAAAAAABAAEAAQAAMTcBAQAAAAAAAgAeAAMAAQQJAAEAAAAAAAMAAQQJAAIAAgAAAAAAAQAAAAAAAAAAAAAAAAAA')
+       format('truetype');
+}</style></head>
+  <body>
+
+    <div class="container">
+
+      <h1>Choose your question:</h1>
+      <select id="questions">
+        <option value="one">Is Eric trying to ruin my life?</option>
+        <option value="two">Did Eric invent the evil that is Javascript?</option>
+        <option value="three">Is Eric Jesse Showalter's father?</option>
+        <option value="four">Did Eric bring this upon himself?</option>
+        <option value="five">Is Eric secretly a vegetarian?</option>
+        <option value="six">Does Eric own more than more than one pair of pants?</option>
+        <option value="seven">Is Eric the bane of my existence?</option>
+      </select>
+      <canvas id="canvas" tabindex="0" width="940" height="400" style="image-rendering: -webkit-optimize-contrast !important;"></canvas>
+      <h1>Click to find your answer:</h1>
+      <button id="button">Click me!</button>
+    </div>
+
+    <script type="text/processing" data-processing-target="canvas">
+      size(940,400);
+      background(255, 250, 247);
+      noStroke();
+
+      function drawBall(){
+        //8 ball
+        fill(0, 0, 0);
+        ellipse(460, 200, 375, 375);
+        //viewport circle
+        fill(40, 44, 51);
+        ellipse(460, 200, 170, 170);
+      }
+      //answer triangle
+      function drawAnswer(){
+        fill(85, 140, 235);
+        triangle(460, 130, 390, 240, 530, 240);
+      }
+
+      drawBall();
+
+      var button = document.querySelector('#button');
+      button.addEventListener('click', function(){
+        fill(255, 255, 255);
+        var answer = floor(random(1, 5));
+
+        if (answer === 1) {
+            drawBall();
+            drawAnswer();
+            fill(247, 244, 244);
+            text("IT IS", 447, 190);
+            text("CERTAIN", 437, 210);
+        }
+        else if (answer === 2) {
+          drawBall();
+
+            drawAnswer();
+            fill(247, 244, 244);
+            text("REPLY", 443, 180);
+            text("HAZY", 447, 200);
+            text("TRY AGAIN", 430, 220);
+        }
+        else if (answer === 3) {
+          drawBall();
+
+            drawAnswer();
+            fill(247, 244, 244);
+            text("SOME", 443, 172);
+            text("QUESTIONS", 423, 194)
+            text("ARE BETTER", 422, 214);
+            text("LEFT UNANSWERED", 400, 234);
+
+        }
+        else if (answer === 4) {
+          drawBall();
+
+            drawAnswer();
+            fill(247, 244, 244);
+            text("MY", 450, 180);
+            text("SOURCES", 430, 200);
+            text("SAY NO", 438, 220);
+        }
+        else if (answer === 5) {
+          drawBall();
+
+            drawAnswer();
+            fill(247, 244, 244);
+            text("CONCENTRATE", 437, 170);
+            text("AND ASK AGAIN", 430, 190);
+        }
+      });
+    </script>
+  
+
+<span style="position: absolute; left: 0px; opacity: 0; font-family: PjsEmptyFont, fantasy;">AAAAAAAA</span></body></html>
